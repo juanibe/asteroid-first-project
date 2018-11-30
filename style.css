@@ -41,7 +41,7 @@ body{
     margin: 30px 0 0 0;
     background-color: white;
     border-radius: 5px;
-    background-image: url("/images/back.png")
+    background-image: url("back.png")
   }
   .logo-img{
     margin-top: 80px;
