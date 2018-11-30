@@ -39,7 +39,6 @@ body{
   canvas{
     border: 2px solid white;
     margin: 30px 0 0 0;
-    background-color: white;
     border-radius: 5px;
     background-image: url("back.png")
   }
