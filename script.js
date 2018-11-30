@@ -12,19 +12,19 @@ window.onload = function () {
     var tipPosY;
     var points = 0;
     var background = new Image()
-    background.src = 'images/back.png'
+    background.src = 'back.png'
     var asteroidImage = new Image()
-    asteroidImage.src = "images/asteroid.png"
+    asteroidImage.src = "asteroid.png"
     spaceShipImage = new Image()
-    spaceShipImage.src = "images/enemy.png"
+    spaceShipImage.src = "enemy.png"
     var enemyShipImage = new Image();
-    enemyShipImage.src = 'images/enemy.png'
+    enemyShipImage.src = 'enemy.png'
     var enemiesArray = []
     var highscore = []
     var soundShoot;
     var soundAsteroid
-    soundShoot = new Audio("sounds/shoot.wav")
-    asteroidDestroyed = new Audio("sounds/asteroid.wav")
+    soundShoot = new Audio("shoot.wav")
+    asteroidDestroyed = new Audio("asteroid.wav")
 
     var backgroundImage = {
         img: background,
