@@ -40,7 +40,7 @@ body{
     border: 2px solid white;
     margin: 30px 0 0 0;
     border-radius: 5px;
-    background-image: url("back.png")
+    background-image: url("background-static.png")
   }
   .logo-img{
     margin-top: 80px;

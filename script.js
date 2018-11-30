@@ -12,7 +12,7 @@ window.onload = function () {
     var tipPosY;
     var points = 0;
     var background = new Image()
-    background.src = 'back.png'
+    background.src = 'background-static.png'
     var asteroidImage = new Image()
     asteroidImage.src = "asteroid.png"
     spaceShipImage = new Image()
