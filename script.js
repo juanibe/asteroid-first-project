@@ -23,8 +23,8 @@ window.onload = function () {
     var highscore = []
     var soundShoot;
     var soundAsteroid
-    soundShoot = new Audio("/sounds/shoot.wav")
-    asteroidDestroyed = new Audio("/sounds/asteroid.wav")
+    soundShoot = new Audio("sounds/shoot.wav")
+    asteroidDestroyed = new Audio("sounds/asteroid.wav")
 
     var backgroundImage = {
         img: background,
