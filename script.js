@@ -220,9 +220,6 @@ window.onload = function () {
     }
     var gameStarted = false
     document.getElementById("start-button").onclick = function () {
-        playerName = $("#name").val().toUpperCase()
-        $("#player-name").html(playerName)
-        $("#name").val("")
         if (gameStarted) return;
         drawSpaceShip()
         updateCanvas()

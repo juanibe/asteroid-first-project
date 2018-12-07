@@ -6,45 +6,29 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script type="text/javascript" src="script.js"></script>
   <script src="jquery-2.1.4.js"></script>
-  
   <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 <body>
+  <div class="game-board">
+      <canvas id="track" width="690" height="380"></canvas>
+  </div>   
  <div class="grid-container"> 
-  <div class="game-intro grid-item">
-    <button id="start-button">START</button>
-    <div class="desc-box">
-      <form>
-        <label>Player: </label>
-        <input type="text" id="name">
-      </form>
-    </div>
-  </div>
-  <table>
-      <tr>
-        <th>Name</th>
-        <th>Socre</th>
-        <th>Date</th>
-      </tr>
-      <tr>
-        <td id="test"></td>
-        <td id="ath-score"></td>
-        <td></td>
-      </tr>
-    </table>
-  <div class="game-board grid-item">
-      <div class="grid-item points">
-          <span>Player:</span>
-          <span id="player-name"></span>
+  <div class="game-intro grid-item">  
+        <button id="start-button">START</button>
+      <div class="indications">
+          <img src="/arrows.png" width="170">
+          <p>Use the arrows to move the ship ^ </p>
+          <p>User spacebar to shoot</p>    
+      </div>
+    
         </div>
-        <div class=>  
-            <p class="points">Points: </p>
-            <p class="points" id="sum-points"></p>
-        </div>
-        <canvas id="track" width="690" height="380"></canvas>
   </div>
  </div>
+ </div>
+ <footer>
+   <span>Rights reserved - nacho bentio</span>
+ </footer>
 </body>
 </html>
