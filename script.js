@@ -5,7 +5,6 @@ window.onload = function () {
     var frameCounter = 0;
     var asteroidsArray = [];
     var bulletsArray = [];
-    var bulletsEnemyArray = []
     var posY = 160;
     var posX = 110;
     var tipPosX;
@@ -19,10 +18,8 @@ window.onload = function () {
     spaceShipImage.src = "enemy.png"
     var enemyShipImage = new Image();
     enemyShipImage.src = 'enemy.png'
-    var enemiesArray = []
     var highscore = []
     var soundShoot;
-    var soundAsteroid
     soundShoot = new Audio("shoot.wav")
     asteroidDestroyed = new Audio("asteroid.wav")
 
@@ -65,8 +62,6 @@ window.onload = function () {
         if (frameCounter % 150 === 0) {
             var randomPosition = Math.floor(Math.random() * 360)
             asteroidsArray.push({ posX: 680, posY: randomPosition })
-        
-
         }
 
         for (var i = 0; i < asteroidsArray.length; i++) {
@@ -96,10 +91,10 @@ window.onload = function () {
             ) {
                 $(".grid-container").append("<h1 class='game-over'>GAME OVER</h1>");
                 gameOver = true;
-                setTimeout(function(){                    
+                setTimeout(function () {
                     location.reload()
-                },2000)
-              
+                }, 2000)
+
             }
             console.log(asteroidsArray[i].posX)
         }
@@ -110,14 +105,14 @@ window.onload = function () {
             }
         }
         if (movingForward) {
-            if(posX>659){
+            if (posX > 659) {
                 posX = 659;
             }
             posX += 3;
         }
 
         if (movingBack) {
-            if(posX<23){
+            if (posX < 23) {
                 posX = 23;
             }
             posX -= 3;
@@ -140,11 +135,11 @@ window.onload = function () {
             bulletsArray[i].posX += 9;
             ctx.fillStyle = "#C3BF47"
             ctx.fillRect(bulletsArray[i].posX, bulletsArray[i].posY, 3, 3);
-             for (var j = 0; j < asteroidsArray.length; j++) {
+            for (var j = 0; j < asteroidsArray.length; j++) {
                 let inter = intersect(
                     { x: bulletsArray[i].posX, y: bulletsArray[i].posY, height: 3, width: 3 },
                     { x: asteroidsArray[j].posX, y: asteroidsArray[j].posY, height: 15, width: 15 }
-                )   
+                )
                 if (inter) {
                     asteroidDestroyed.play()
 
@@ -165,10 +160,7 @@ window.onload = function () {
             deleteBullet()
             deleteAsteroid()
         }
-    
-        //deleteBullet()
 
-        
         window.requestAnimationFrame(updateCanvas);
     }
     var shooting = false;
@@ -241,39 +233,34 @@ window.onload = function () {
             rect1top > rect2bottom ||
             rect1bottom < rect2top
         );
-    }   
-    
-   
+    }
+
+
     console.log(highscore)
 
-    function storeLocalstorage(){
+    function storeLocalstorage() {
         name = highscore.push(playerName)
         localStorage.setItem("Name", name)
         console.log(highscore)
-        
+
     }
 
-    function readLocalstorage(){
-        var nameR = localStorage.getItem("Name")
-        document.getElementById("test").innerHTML = nameR
-    }
-
-    function deleteBullet(){
-        for(var i = 0;i<bulletsArray.length;i++){
-            if(bulletsArray[i].posX>691){
-                bulletsArray.splice(bulletsArray[i],1)
+    function deleteBullet() {
+        for (var i = 0; i < bulletsArray.length; i++) {
+            if (bulletsArray[i].posX > 691) {
+                bulletsArray.splice(bulletsArray[i], 1)
             }
         }
     }
 
-    function deleteAsteroid(){
-        for(var i = 0;i<asteroidsArray.length;i++){
-            if(asteroidsArray[i]<20){
-                asteroidsArray.splice(asteroidsArray[i],1)
+    function deleteAsteroid() {
+        for (var i = 0; i < asteroidsArray.length; i++) {
+            if (asteroidsArray[i] < 20) {
+                asteroidsArray.splice(asteroidsArray[i], 1)
             }
         }
     }
 
-    
+
 
 }
